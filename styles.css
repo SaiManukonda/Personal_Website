@@ -1,0 +1,570 @@
+:root {
+  color-scheme: light;
+  --bg: #e9e1cf;
+  --paper: #fbf6e8;
+  --paper-soft: #f5ecd8;
+  --ink: #201c16;
+  --muted: #625846;
+  --rule: #2d261d;
+  --hairline: rgba(45, 38, 29, 0.28);
+  --accent: #0c5851;
+  --accent-soft: #dce8df;
+  --shadow: 0 22px 70px rgba(39, 30, 18, 0.18);
+}
+
+:root.dark {
+  color-scheme: dark;
+  --bg: #151412;
+  --paper: #211f1b;
+  --paper-soft: #2b2821;
+  --ink: #f4ead6;
+  --muted: #c5bba7;
+  --rule: #f4ead6;
+  --hairline: rgba(244, 234, 214, 0.25);
+  --accent: #8bd7ca;
+  --accent-soft: #18352f;
+  --shadow: 0 22px 70px rgba(0, 0, 0, 0.32);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(90deg, rgba(45, 38, 29, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(45, 38, 29, 0.06) 1px, transparent 1px),
+    radial-gradient(circle at top, rgba(12, 88, 81, 0.12), transparent 32rem),
+    var(--bg);
+  background-size: 24px 24px, 24px 24px, auto;
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.webbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(1180px, calc(100% - 1.5rem));
+  margin: 0 auto;
+  padding: 0.75rem 0;
+  backdrop-filter: blur(14px);
+}
+
+.webbrand,
+.webbar nav,
+.contact-strip {
+  display: flex;
+  align-items: center;
+}
+
+.webbrand {
+  justify-content: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  border: 2px solid var(--rule);
+  background: var(--paper);
+  color: var(--accent);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-weight: 700;
+  overflow: hidden;
+  padding: 0.12rem;
+}
+
+.webbrand img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+}
+
+.webbar nav {
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  border: 1px solid var(--hairline);
+  background: color-mix(in srgb, var(--paper) 84%, transparent);
+}
+
+.webbar nav a {
+  padding: 0.55rem 0.75rem;
+  border-right: 1px solid var(--hairline);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.webbar nav a:last-child {
+  border-right: 0;
+}
+
+.webbar nav a:hover {
+  color: var(--ink);
+  background: var(--paper-soft);
+}
+
+.theme-button {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 2px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.newspaper {
+  width: min(1180px, calc(100% - 1.5rem));
+  margin: 0.75rem auto 4rem;
+  padding: clamp(1rem, 2vw, 1.6rem);
+  border: 2px solid var(--rule);
+  background:
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(45, 38, 29, 0.025) 27px 28px),
+    var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.masthead {
+  padding-bottom: 1rem;
+  border-bottom: 5px double var(--rule);
+  text-align: center;
+}
+
+.section-banner,
+.date-column span {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.masthead h1 {
+  margin: 0.3rem 0;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(3rem, 8vw, 6.8rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 700;
+}
+
+.contact-strip {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 1rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.contact-strip a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.8rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.contact-strip a + a {
+  border-left: 1px solid var(--hairline);
+}
+
+.contact-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.mail-icon {
+  position: relative;
+  display: inline-block;
+  border: 1.8px solid currentColor;
+}
+
+.mail-icon::before,
+.mail-icon::after {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  width: 0.63rem;
+  height: 1.8px;
+  background: currentColor;
+}
+
+.mail-icon::before {
+  left: 0.04rem;
+  transform: rotate(31deg);
+  transform-origin: left center;
+}
+
+.mail-icon::after {
+  right: 0.04rem;
+  transform: rotate(-31deg);
+  transform-origin: right center;
+}
+
+:root.dark .contact-icon:not(.mail-icon) {
+  filter: invert(1) grayscale(1) brightness(1.4);
+}
+
+p,
+li,
+dd {
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+p {
+  margin-top: 0;
+}
+
+dt {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+dd {
+  margin: 0.15rem 0 0;
+}
+
+.paper-section {
+  padding: 1.25rem 0;
+  border-bottom: 2px solid var(--rule);
+}
+
+.paper-section:last-child {
+  border-bottom: 0;
+}
+
+.section-banner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0;
+  border-top: 2px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.section-banner span:last-child {
+  color: var(--muted);
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 185px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.experience-item:last-child {
+  border-bottom: 0;
+}
+
+.headline-item {
+  padding: 1rem;
+  border: 2px solid var(--rule);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent-soft) 88%, transparent), var(--paper)),
+    var(--accent-soft);
+}
+
+.headline-item h2 {
+  margin: 0 0 0.45rem;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.55rem);
+  line-height: 1.08;
+}
+
+.date-column {
+  display: grid;
+  align-content: start;
+  gap: 0.3rem;
+}
+
+.date-column strong {
+  color: var(--ink);
+  font-size: 0.96rem;
+}
+
+.date-column small {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.company {
+  margin-bottom: 0.55rem;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.entry-with-logo {
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.logo-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.logo-card {
+  min-height: 4.75rem;
+  padding: 0.75rem;
+}
+
+.brand-logo {
+  display: inline-block;
+  max-width: 100%;
+  object-fit: contain;
+  filter: none;
+}
+
+:root.dark .brand-logo {
+  background: transparent;
+  padding: 0;
+}
+
+.inline-logo {
+  width: 2.7rem;
+  height: 1.45rem;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+.inline-logo.wide {
+  width: 4.8rem;
+}
+
+.date-logo {
+  width: 6.4rem;
+  height: 2.2rem;
+}
+
+.mathworks-logo {
+  width: 3rem;
+  height: 2.4rem;
+}
+
+.mathworks-logo-stack {
+  display: inline-grid;
+  width: 3rem;
+  height: 2.4rem;
+  place-items: center;
+}
+
+.mathworks-logo-stack .mathworks-logo {
+  grid-area: 1 / 1;
+}
+
+.mathworks-logo-dark {
+  display: none;
+}
+
+.aws-marketplace-logo {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-height: 7.5rem;
+  border-width: 2px;
+  background: transparent;
+}
+
+.aws-marketplace-logo img {
+  width: 6.6rem;
+  height: auto;
+}
+
+:root.dark .aws-marketplace-logo img,
+:root.dark .inline-logo,
+:root.dark .date-logo:not(.mathworks-logo),
+:root.dark .school-logo img {
+  filter: invert(1) grayscale(1) brightness(1.65);
+}
+
+:root.dark .mathworks-logo-light {
+  display: none;
+}
+
+:root.dark .mathworks-logo-dark {
+  display: inline-block;
+  filter: invert(1) brightness(1.45);
+}
+
+
+.school-logo img {
+  width: 100%;
+  max-height: 3rem;
+  object-fit: contain;
+}
+
+.credential-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.credential-strip div {
+  display: grid;
+  grid-template-columns: 4.7rem minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: center;
+  padding: 0.8rem;
+  border: 1px solid var(--hairline);
+  background: var(--paper-soft);
+}
+
+.credential-strip p {
+  margin: 0;
+}
+
+.school-logo {
+  min-height: 3.8rem;
+}
+
+h3 {
+  margin: 0 0 0.45rem;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.65rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.experience-columns {
+  columns: 2 28rem;
+  column-gap: 1.4rem;
+  column-rule: 1px solid var(--hairline);
+}
+
+.experience-columns .experience-item {
+  break-inside: avoid;
+  grid-template-columns: 150px minmax(0, 1fr);
+}
+
+.tag-line {
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.tag-line span {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.25rem 0.45rem;
+  border: 1px solid var(--hairline);
+  background: var(--paper-soft);
+}
+
+.skill-columns {
+  columns: 3 14rem;
+  column-gap: 1.25rem;
+  column-rule: 1px solid var(--hairline);
+}
+
+.skill-columns div {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+.skill-columns p {
+  margin-bottom: 0;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .experience-item,
+  .experience-columns .experience-item,
+  .entry-with-logo,
+  .credential-strip {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 640px) {
+  .webbar {
+    align-items: stretch;
+  }
+
+  .webbar nav {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .newspaper {
+    width: min(100% - 0.75rem, 1180px);
+    padding: 0.85rem;
+  }
+
+  .masthead h1 {
+    font-size: 2.7rem;
+  }
+
+  .contact-strip {
+    display: grid;
+  }
+
+  .contact-strip a + a {
+    border-left: 0;
+    border-top: 1px solid var(--hairline);
+  }
+
+  .experience-columns,
+  .skill-columns {
+    columns: auto;
+  }
+}

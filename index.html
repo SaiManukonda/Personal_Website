@@ -1,12 +1,165 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Redirecting...</title>
-    <!-- Redirect to the new URL after 0 seconds -->
-    <meta http-equiv="refresh" content="0;url=./about.html">
-</head>
-<body>
-    <!-- Optional: you can add a message or a link for users who have JavaScript disabled or whose browsers don't support meta redirection -->
-    <p>If you are not redirected, <a href="https://saimanukonda.me/about.html">click here</a>.</p>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sai Manukonda - software engineer focused on agentic AI, cloud systems, and developer tooling."
+    />
+    <title>Sai Manukonda</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/profile-logo.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=newspaper" />
+  </head>
+  <body>
+    <header class="webbar">
+      <a class="webbrand" href="#top" aria-label="Sai Manukonda resume home">
+        <img src="./assets/profile-logo.png" alt="Sai Manukonda profile photo" />
+      </a>
+      <nav aria-label="Resume navigation">
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+      </nav>
+      <button class="theme-button" id="theme-toggle" type="button" aria-label="Toggle theme">◐</button>
+    </header>
+
+    <main class="newspaper" id="top">
+      <section class="masthead reveal">
+        <h1>Sai Manukonda</h1>
+        <div class="contact-strip" id="contact" aria-label="Contact links">
+          <a href="mailto:manukondasai24@gmail.com">
+            <span class="contact-icon mail-icon" aria-hidden="true"></span>
+            manukondasai24@gmail.com
+          </a>
+          <a href="https://github.com/SaiManukonda">
+            <img class="contact-icon" src="https://commons.wikimedia.org/wiki/Special:FilePath/Octicons-mark-github.svg" alt="" aria-hidden="true" />
+            github.com/SaiManukonda
+          </a>
+          <a href="https://linkedin.com/in/saimanukonda">
+            <img class="contact-icon" src="https://commons.wikimedia.org/wiki/Special:FilePath/LinkedIn_icon.svg" alt="" aria-hidden="true" />
+            linkedin.com/in/saimanukonda
+          </a>
+        </div>
+      </section>
+
+      <section class="paper-section reveal" id="experience">
+        <div class="section-banner">
+          <span>Experience</span>
+          <span>Professional Record</span>
+        </div>
+
+        <article class="experience-item headline-item">
+          <div class="date-column">
+            <span>Current</span>
+            <strong>Oct 2026 - Present</strong>
+            <small>New York, NY</small>
+          </div>
+          <div class="entry-with-logo">
+            <div class="logo-card aws-marketplace-logo" aria-label="AWS Marketplace">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_Web_Services_Logo.svg" alt="AWS logo" />
+            </div>
+            <div>
+            <h2>Software Development Engineer I</h2>
+            <p class="company">AWS Marketplace</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="experience-columns">
+          <article class="experience-item">
+            <div class="date-column">
+              <span><img class="brand-logo date-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Capital_One_logo.svg" alt="Capital One logo" /></span>
+              <strong>Aug 2025 - Oct 2026</strong>
+              <small>McLean, VA</small>
+            </div>
+            <div>
+              <h3>Associate Software Engineer</h3>
+              <ul>
+                <li>Built an agentic Claude pipeline that generates PRs for dependency upgrades and vulnerability fixes.</li>
+                <li>Created RAG-assisted CI/CD remediation using historical logs to surface deployment failure suggestions.</li>
+                <li>Authored Claude skills, slash commands, and repo knowledge bases for broad engineering adoption.</li>
+                <li>Scaled synthetic monitoring to 50+ teams and reduced pipeline failures by 23%.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="date-column">
+              <span><img class="brand-logo date-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Capital_One_logo.svg" alt="Capital One logo" /></span>
+              <strong>Jun 2024 - Aug 2024</strong>
+              <small>McLean, VA</small>
+            </div>
+            <div>
+              <h3>Software Engineer Intern</h3>
+              <ul>
+                <li>Parallelized application workflows with AWS Lambda, SQS, and multithreading.</li>
+                <li>Migrated Docker workloads from EC2 to Fargate, reducing infrastructure overhead by 37%.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="date-column">
+              <span class="mathworks-logo-stack">
+                <img class="brand-logo date-logo mathworks-logo mathworks-logo-light" src="https://commons.wikimedia.org/wiki/Special:FilePath/Matlab_Logo.png" alt="MathWorks logo" />
+                <img class="brand-logo date-logo mathworks-logo mathworks-logo-dark" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mathworks.svg" alt="MathWorks logo" />
+              </span>
+              <strong>May 2023 - Aug 2023</strong>
+              <small>Natick, MA</small>
+            </div>
+            <div>
+              <h3>Software Engineer Intern</h3>
+              <ul>
+                <li>Built Node.js, Express, and SQL pipelines for test analytics across 100+ engineering teams.</li>
+                <li>Shipped a React dashboard that saved teams 2+ hours per sprint when reviewing test results.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="paper-section reveal" id="skills">
+          <div class="section-banner">
+            <span>Skills, Education, and Credentials</span>
+            <span>Technical Index</span>
+          </div>
+          <div class="credential-strip" aria-label="Education and certifications">
+            <div>
+              <span class="logo-card school-logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rutgers_University_New_Brunswick_logotype.svg" alt="Rutgers University logo" /></span>
+              <p><strong>Rutgers University</strong> Computer Science, 2025</p>
+            </div>
+            <div>
+              <span class="logo-card school-logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_Web_Services_Logo.svg" alt="AWS logo" /></span>
+              <p><strong>AWS Certified</strong> Solutions Architect Associate</p>
+            </div>
+          </div>
+          <div class="skill-columns">
+            <div>
+              <h3>Languages</h3>
+              <p>Python, Go, Java, JavaScript, TypeScript, C++, SQL</p>
+            </div>
+            <div>
+              <h3>AI / Agents</h3>
+              <p>RAG, MCP, LangChain, LangGraph, LangSmith, Pinecone, Hugging Face</p>
+            </div>
+            <div>
+              <h3>Cloud / DevOps</h3>
+              <p>AWS, Docker, Kubernetes, Jenkins, Lambda, SQS, SNS, Fargate</p>
+            </div>
+          </div>
+      </section>
+    </main>
+
+    <script src="./app.js?v=newspaper"></script>
+  </body>
 </html>
