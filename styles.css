@@ -398,7 +398,7 @@ dd {
   display: none;
 }
 
-.featured-logo {
+.aws-marketplace-logo {
   display: grid;
   align-content: center;
   justify-items: center;
@@ -407,12 +407,12 @@ dd {
   background: transparent;
 }
 
-.featured-logo img {
+.aws-marketplace-logo img {
   width: 6.6rem;
   height: auto;
 }
 
-:root.dark .featured-logo img,
+:root.dark .aws-marketplace-logo img,
 :root.dark .inline-logo,
 :root.dark .date-logo:not(.mathworks-logo),
 :root.dark .school-logo img {
